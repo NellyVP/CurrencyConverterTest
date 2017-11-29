@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.390374"
+            timestampString = "533672036.528344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -24,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.390454"
+            timestampString = "533672036.528595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -34,31 +34,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.836315"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getSymbolForCurrencyCode(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/CurrenciesViewController/CurrenciesViewController.swift"
-            timestampString = "533654987.836746"
+            timestampString = "533672036.528756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -70,7 +54,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.391137"
+            timestampString = "533672036.530447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -86,7 +70,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.391193"
+            timestampString = "533672036.530574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -102,7 +86,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.39124"
+            timestampString = "533672036.530704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -118,7 +102,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/RequestController/RequestController.swift"
-            timestampString = "533654528.391285"
+            timestampString = "533672036.53098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -134,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/CurrenciesViewController/CurrenciesViewController.swift"
-            timestampString = "533654987.836956"
+            timestampString = "533672036.531311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "downloadRates(baseRate:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -149,77 +133,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CurrenciesViewController/CurrenciesViewController.swift"
-            timestampString = "533654987.837034"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CurrenciesViewController/CurrenciesViewController.swift"
-            timestampString = "533654987.837101"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.837149"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "getSymbolForCurrencyCode(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.837383"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "getSymbolForCurrencyCode(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.837643"
+            timestampString = "533672036.532027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
             endingLineNumber = "13"
-            landmarkName = "getSymbolForCurrencyCode(code:)"
+            landmarkName = "getLocalisedStringForCurrencyCode(code:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -230,60 +150,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RevolutTest/CurrenciesViewController/CurrenciesViewController.swift"
-            timestampString = "533654987.83798"
+            timestampString = "533672036.532187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.838037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "locale(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.838272"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "locale(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RevolutTest/CountryFinder/CountryFinder.swift"
-            timestampString = "533654987.838504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "locale(from:)"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "downloadRates(baseRate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

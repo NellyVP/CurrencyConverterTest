@@ -12,8 +12,8 @@ class ModelController: NSObject {
 
     static let sharedInstance = ModelController()
     
-    func populateBaseCurrency(dict: NSDictionary) -> BaseCurrency {
-        let currencyValues: BaseCurrency
+    func populateBaseCurrencyInfo(dict: NSDictionary) -> BaseCurrencyInfo {
+        let currencyValues: BaseCurrencyInfo
         
         let baseRate     = dict["base"] as! String
         let date         = dict["date"] as! String
@@ -23,7 +23,7 @@ class ModelController: NSObject {
         dateFormatter.dateFormat = "YYYY-MM-DD" //Your date format
         let accessDate = dateFormatter.date(from: date) //according to date format your date string
         
-        currencyValues = BaseCurrency (base: baseRate, lastAccessedDate: accessDate!, ratesDict: ratesDict as! NSDictionary)
+        currencyValues = BaseCurrencyInfo (base: baseRate, lastAccessedDate: accessDate!, ratesDict: ratesDict as! NSDictionary)
         
         return currencyValues
     }

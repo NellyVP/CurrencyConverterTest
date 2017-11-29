@@ -9,23 +9,18 @@
 import UIKit
 
 class CountryFinder: NSObject {
-    func getSymbolForCurrencyCode(code: String) -> String? {
-        let locale = NSLocale(localeIdentifier: code)
-        let symbol = locale.object(forKey: NSLocale.Key.currencySymbol) as! String
+    func getLocalisedStringForCurrencyCode(code: String) -> String? {
+        let newlocale = NSLocale(localeIdentifier: "en_US")
+        return newlocale.displayName(forKey: NSLocale.Key.currencyCode, value: code)
+    }
+    
+    func flag(country:String) -> String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
+    }
 
-        if symbol == code {
-            let newlocale = NSLocale(localeIdentifier: code.characters.dropLast() + "_en")
-            return newlocale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
-        }
-       // return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
-        return locale.localizedString(forCountryCode:code)
-    }
-    func locale(from currencyCode: String) -> Locale {
-        var locale = Locale.current
-        if (locale.currencyCode != currencyCode) {
-            let identifier = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.currencyCode.rawValue: currencyCode])
-            locale = NSLocale(localeIdentifier: identifier) as Locale
-        }
-        return locale;
-    }
 }

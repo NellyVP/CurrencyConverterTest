@@ -15,9 +15,9 @@ class RequestController: NSObject {
     
     var networkAccessible:Bool?
     
-    func downloadLatestRatesForBaseRate (baseRate:String, completionBlock: @escaping (BaseCurrency?) -> Void) {
+    func downloadLatestRatesForBaseRate (baseRate:String, completionBlock: @escaping (BaseCurrencyInfo?) -> Void) {
         let modifiedURLString = String(format:"%@%@", baseURL, baseRate)
-        var baseCurr: BaseCurrency!
+        var baseCurr: BaseCurrencyInfo!
         
         Alamofire.request(
             URL(string: modifiedURLString)!,
@@ -32,7 +32,7 @@ class RequestController: NSObject {
                 }
                 
                 if let arrayOfDic = response.result.value as? NSDictionary {
-                    baseCurr = ModelController.sharedInstance.populateBaseCurrency(dict: arrayOfDic)
+                    baseCurr = ModelController.sharedInstance.populateBaseCurrencyInfo(dict: arrayOfDic)
                 }
                 completionBlock(baseCurr)
         }

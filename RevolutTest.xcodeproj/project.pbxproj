@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11167DBEF61DD64A6EB91C92 /* libPods-RevolutTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361E90D214BCD741A4CBFA5 /* libPods-RevolutTestUITests.a */; };
-		1C1F02981FCDA137000EDD9E /* BaseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F02971FCDA137000EDD9E /* BaseCurrency.swift */; };
+		1C1F02981FCDA137000EDD9E /* BaseCurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F02971FCDA137000EDD9E /* BaseCurrencyInfo.swift */; };
 		1C1F02A01FCDCBCD000EDD9E /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F029F1FCDCBCD000EDD9E /* ReachabilityManager.swift */; };
 		1C24F87D1FC6E3F500634763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24F87C1FC6E3F500634763 /* AppDelegate.swift */; };
 		1C24F87F1FC6E3F500634763 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24F87E1FC6E3F500634763 /* CurrenciesViewController.swift */; };
@@ -20,6 +20,7 @@
 		1C24F8AB1FC720DE00634763 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24F8AA1FC720DE00634763 /* ModelController.swift */; };
 		1C24F8AF1FC7218300634763 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24F8AE1FC7218300634763 /* RequestController.swift */; };
 		1C873E941FCED58600BFBA05 /* CountryFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C873E931FCED58600BFBA05 /* CountryFinder.swift */; };
+		1C873E971FCF239300BFBA05 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C873E961FCF239300BFBA05 /* Currency.swift */; };
 		4B9C6FF3639E2C3359D98F8C /* Pods_RevolutTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86F721A0FE837EEE614D351 /* Pods_RevolutTest.framework */; };
 		A06C574295A1E461675D9236 /* libPods-RevolutTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13982805A73B3A6CBB92B59D /* libPods-RevolutTestTests.a */; };
 /* End PBXBuildFile section */
@@ -44,7 +45,7 @@
 /* Begin PBXFileReference section */
 		13982805A73B3A6CBB92B59D /* libPods-RevolutTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RevolutTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAEB3DD2698935714410082 /* Pods-RevolutTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevolutTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevolutTest/Pods-RevolutTest.debug.xcconfig"; sourceTree = "<group>"; };
-		1C1F02971FCDA137000EDD9E /* BaseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCurrency.swift; sourceTree = "<group>"; };
+		1C1F02971FCDA137000EDD9E /* BaseCurrencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCurrencyInfo.swift; sourceTree = "<group>"; };
 		1C1F029F1FCDCBCD000EDD9E /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		1C24F8791FC6E3F500634763 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C24F87C1FC6E3F500634763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		1C24F8AE1FC7218300634763 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
 		1C873E901FCDDDEA00BFBA05 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RevolutTest/Info.plist; sourceTree = SOURCE_ROOT; };
 		1C873E931FCED58600BFBA05 /* CountryFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFinder.swift; sourceTree = "<group>"; };
+		1C873E961FCF239300BFBA05 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		4BC05AC66E82C99BCF85B7E2 /* Pods-RevolutTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevolutTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevolutTest/Pods-RevolutTest.release.xcconfig"; sourceTree = "<group>"; };
 		7361E90D214BCD741A4CBFA5 /* libPods-RevolutTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RevolutTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569ABC3D734E95875531B67 /* Pods-RevolutTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevolutTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevolutTestTests/Pods-RevolutTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 		1C1F02961FCDA0F6000EDD9E /* baseCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				1C1F02971FCDA137000EDD9E /* BaseCurrency.swift */,
+				1C1F02971FCDA137000EDD9E /* BaseCurrencyInfo.swift */,
 			);
 			path = baseCurrency;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 		1C24F87B1FC6E3F500634763 /* RevolutTest */ = {
 			isa = PBXGroup;
 			children = (
+				1C873E951FCF1FF500BFBA05 /* Currency */,
 				1C873E921FCED56C00BFBA05 /* CountryFinder */,
 				1C873E881FCDD7D100BFBA05 /* AppDelegate */,
 				1C873E871FCDD7C200BFBA05 /* UI */,
@@ -236,6 +239,14 @@
 				1C873E931FCED58600BFBA05 /* CountryFinder.swift */,
 			);
 			path = CountryFinder;
+			sourceTree = "<group>";
+		};
+		1C873E951FCF1FF500BFBA05 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				1C873E961FCF239300BFBA05 /* Currency.swift */,
+			);
+			path = Currency;
 			sourceTree = "<group>";
 		};
 		45B57C19DDFAF7E337DF457F /* Frameworks */ = {
@@ -562,9 +573,10 @@
 				1C873E941FCED58600BFBA05 /* CountryFinder.swift in Sources */,
 				1C24F87F1FC6E3F500634763 /* CurrenciesViewController.swift in Sources */,
 				1C24F87D1FC6E3F500634763 /* AppDelegate.swift in Sources */,
+				1C873E971FCF239300BFBA05 /* Currency.swift in Sources */,
 				1C24F8AF1FC7218300634763 /* RequestController.swift in Sources */,
 				1C1F02A01FCDCBCD000EDD9E /* ReachabilityManager.swift in Sources */,
-				1C1F02981FCDA137000EDD9E /* BaseCurrency.swift in Sources */,
+				1C1F02981FCDA137000EDD9E /* BaseCurrencyInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

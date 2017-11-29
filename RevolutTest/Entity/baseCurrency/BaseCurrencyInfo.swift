@@ -1,5 +1,5 @@
 //
-//  BaseCurrency.swift
+//  BaseCurrencyInfo.swift
 //  RevolutTest
 //
 //  Created by Nilofar Vahab poor on 28/11/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseCurrency: NSObject {
+class BaseCurrencyInfo: NSObject {
     var baseRate: String?
     var lastAccessDate: Date?
     var rates: NSDictionary?

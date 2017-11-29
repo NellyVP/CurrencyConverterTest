@@ -13,15 +13,15 @@ class currencyCell: UITableViewCell {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyDescription: UILabel!
     @IBOutlet weak var baseRateText: UITextField!
-    @IBOutlet weak var countryImg:UIImageView!
-    
+    @IBOutlet weak var countryFlag:UILabel!
 }
 
 class CurrenciesViewController: UIViewController, NetworkStatusListener, UITableViewDelegate, UITableViewDataSource {
     let requestController   = RequestController()
     let countryFinder       = CountryFinder()
+    var arrayOfCurrencies   = [Currency]()
 
-    var baseCurrency: BaseCurrency!
+    var baseCurrency: BaseCurrencyInfo!
     var refreshTimer: Timer!
     @IBOutlet var tableView:UITableView!
     @IBOutlet var heightConstraints: NSLayoutConstraint!
@@ -31,10 +31,8 @@ class CurrenciesViewController: UIViewController, NetworkStatusListener, UITable
         super.viewDidLoad()
         tableView.delegate      = self
         tableView.dataSource    = self
-        refreshTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(refreshRate), userInfo: nil, repeats: true)
-
+        refreshTimer            = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshRate), userInfo: nil, repeats: true)
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +43,7 @@ class CurrenciesViewController: UIViewController, NetworkStatusListener, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ReachabilityManager.shared.addListener(listener: self)
-        self.downloadRates(baseRate: "EUR")
+        self.downloadRates(baseRate: "EUR") // this is the base url when we dont have anything set.
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,34 +56,18 @@ class CurrenciesViewController: UIViewController, NetworkStatusListener, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (baseCurrency != nil) {
-            return (baseCurrency.rates?.count)!
-        }
-        return 0
+        return arrayOfCurrencies.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell", for: indexPath) as! currencyCell
         
-        
-        cell.currencyLabel?.text = baseCurrency.rates?.allKeys[indexPath.row] as? String
-        let arrayOfNames:[String] = baseCurrency.rates?.allKeys as! [String]
-
-        var countryNames = [String]()
-        let locale:Locale  = countryFinder.locale(from: "GBP")
-        print(locale)
-
-        let fullName:String = countryFinder.getSymbolForCurrencyCode(code: "GBP")!
-        print(fullName)
-        
-//        for name:String in arrayOfNames {
-//            let fullName = countryFinder.getSymbolForCurrencyCode(code: name)
-//            countryNames.append(fullName!)
-//        }
-        
-       // countryFinder.getSymbolForCurrencyCode(code: (baseCurrency.rates?.allKeys[indexPath.row] as? String)!)
-       // cell.currencyDescription?.text = countryNames[indexPath.row]
-        cell.currencyDescription?.text = baseCurrency.rates?.allKeys[indexPath.row] as? String
+        let cellCurrency: Currency  = arrayOfCurrencies[indexPath.row]
+        cell.currencyLabel.text     = cellCurrency.currencyCode
+        cell.countryFlag.text       = cellCurrency.countryFlag
+        cell.baseRateText.text      = String(describing: cellCurrency.currencyRate!)
+        cell.currencyDescription.text = cellCurrency.countryName
 
         return cell
     }
@@ -112,7 +94,6 @@ class CurrenciesViewController: UIViewController, NetworkStatusListener, UITable
             UIView.animate(withDuration: 0.5) {
                 self.heightConstraints.constant = constraints
                 self.view.layoutIfNeeded()
-                
             }
         }
     }
@@ -129,7 +110,18 @@ class CurrenciesViewController: UIViewController, NetworkStatusListener, UITable
     
      func downloadRates(baseRate:String) -> Void {
         requestController.downloadLatestRatesForBaseRate(baseRate: baseRate) { (baseCurr) in
+            var currencies = [Currency]()
+
             self.baseCurrency = baseCurr
+            for (key, value) in self.baseCurrency.rates! {
+                let currencyCode: String = key as! String
+                let currencyRate: Double = value as! Double
+                let currDescription: String =  self.countryFinder.getLocalisedStringForCurrencyCode(code: key as! String)!
+                let countFlag:String = self.countryFinder.flag(country: key as! String)
+                let returnedCurrency = Currency (currencyC: currencyCode, localisedName:currDescription, flag: countFlag, rate:currencyRate)
+                currencies.append(returnedCurrency)
+            }
+            self.arrayOfCurrencies = currencies
             self.tableView .reloadData()
         }
     }

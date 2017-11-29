@@ -41,21 +41,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xNs-I8-RDs">
-                                                    <rect key="frame" x="15" y="9" width="60" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="NLy-yd-rAh"/>
-                                                        <constraint firstAttribute="width" constant="60" id="f15-1n-QJm"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xql-e3-px5">
-                                                    <rect key="frame" x="83" y="9" width="70.5" height="21"/>
+                                                    <rect key="frame" x="88" y="9" width="70.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fes-ay-LAQ">
-                                                    <rect key="frame" x="83" y="51" width="78.5" height="18"/>
+                                                    <rect key="frame" x="88" y="51" width="78.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -66,26 +59,35 @@
                                                         <constraint firstAttribute="width" constant="98" id="bkY-Tt-jag"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="NZG-TG-rCc">
+                                                    <rect key="frame" x="9" y="7.5" width="71" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="hXI-VQ-8ih"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="fes-ay-LAQ" firstAttribute="leading" secondItem="NZG-TG-rCc" secondAttribute="trailing" constant="8" id="1HU-75-diV"/>
                                                 <constraint firstItem="xql-e3-px5" firstAttribute="top" secondItem="sG4-zz-5hL" secondAttribute="top" constant="9" id="MQk-0u-jFp"/>
                                                 <constraint firstAttribute="bottom" secondItem="fes-ay-LAQ" secondAttribute="bottom" constant="10.5" id="NIV-4r-hBb"/>
-                                                <constraint firstItem="xql-e3-px5" firstAttribute="leading" secondItem="xNs-I8-RDs" secondAttribute="trailing" constant="8" id="ObO-8H-UcN"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fes-ay-LAQ" secondAttribute="trailing" constant="20" symbolic="YES" id="RkT-Yj-IKR"/>
-                                                <constraint firstItem="xNs-I8-RDs" firstAttribute="leading" secondItem="sG4-zz-5hL" secondAttribute="leading" constant="15" id="X5k-wT-xuh"/>
-                                                <constraint firstItem="xNs-I8-RDs" firstAttribute="centerY" secondItem="sG4-zz-5hL" secondAttribute="centerY" id="X5w-Iw-DlC"/>
-                                                <constraint firstItem="fes-ay-LAQ" firstAttribute="leading" secondItem="xNs-I8-RDs" secondAttribute="trailing" constant="8" id="atp-GZ-eie"/>
+                                                <constraint firstItem="NZG-TG-rCc" firstAttribute="leading" secondItem="sG4-zz-5hL" secondAttribute="leading" constant="9" id="Xbe-OW-KiK"/>
                                                 <constraint firstItem="zoI-gf-f8X" firstAttribute="centerY" secondItem="sG4-zz-5hL" secondAttribute="centerY" id="fkq-tJ-ETb"/>
+                                                <constraint firstItem="NZG-TG-rCc" firstAttribute="centerY" secondItem="sG4-zz-5hL" secondAttribute="centerY" id="n6l-Z8-82L"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xql-e3-px5" secondAttribute="trailing" constant="20" symbolic="YES" id="qIy-Ye-w0y"/>
+                                                <constraint firstItem="xql-e3-px5" firstAttribute="leading" secondItem="NZG-TG-rCc" secondAttribute="trailing" constant="8" id="vzT-id-Dg1"/>
                                                 <constraint firstAttribute="trailing" secondItem="zoI-gf-f8X" secondAttribute="trailing" constant="15" id="wzN-uz-rTd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="baseRateText" destination="zoI-gf-f8X" id="DpT-iY-FC7"/>
-                                            <outlet property="countryImg" destination="xNs-I8-RDs" id="9TT-y2-Vst"/>
+                                            <outlet property="countryFlag" destination="NZG-TG-rCc" id="RXh-vR-NNa"/>
                                             <outlet property="currencyDescription" destination="fes-ay-LAQ" id="ZWS-YN-UXk"/>
                                             <outlet property="currencyLabel" destination="xql-e3-px5" id="t3l-Dc-90s"/>
                                         </connections>
